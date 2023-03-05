@@ -1,0 +1,6 @@
+C:\Users\ethan\source\repos\CrossCutting\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\ethan\source\repos\CrossCutting\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\ethan\source\repos\CrossCutting\CrossCutting\obj\Debug\CrossCutting.csproj.AssemblyReference.cache
+C:\Users\ethan\source\repos\CrossCutting\CrossCutting\obj\Debug\CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\ethan\source\repos\CrossCutting\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\ethan\source\repos\CrossCutting\CrossCutting\obj\Debug\CrossCutting.pdb
