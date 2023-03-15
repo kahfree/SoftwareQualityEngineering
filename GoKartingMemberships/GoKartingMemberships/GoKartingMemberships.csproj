@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailSender.cs" />
+    <Compile Include="FileLogger.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="MemberDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

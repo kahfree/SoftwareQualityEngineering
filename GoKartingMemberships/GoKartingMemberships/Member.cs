@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoKartingMemberships
 {
-    class Member
+    public class Member
     {
         private string memberType;
         public string MemberType
@@ -15,14 +15,22 @@ namespace GoKartingMemberships
         }
         private DateTime signUpDate;
         private DateTime renewalDate;
+        public DateTime SignUpDate { get { return signUpDate; } }
+        public DateTime RenewalDate { get { return renewalDate; } }
         private enum Tier { Gold, Silver, Bronze};
-        public Member()
+
+        private EmailSender emailSender;
+        private FileLogger fileLogger;
+        public Member(EmailSender emailSender, FileLogger fileLogger)
         {
             signUpDate = DateTime.Now;
+            this.emailSender = emailSender;
+            this.fileLogger = fileLogger;
         }
 
         public bool setRenewalDate(string tier)
         {
+            renewalDate = DateTime.Now;
             int membershipLength = 30;
             for (Tier memPri = Tier.Gold; memPri <= Tier.Bronze;
                  memPri++)
@@ -39,41 +47,33 @@ namespace GoKartingMemberships
                     renewalDate = DateTime.Now.AddMonths(membershipLength);
                 }
             }
-            return true;
+            return renewalDate != DateTime.Now;
         }
 
         public bool sendRenewalDiscount()
         {
-            int discountPercent = 30;
-
-            if (memberType == Tier.Gold.ToString())
-                discountPercent = 24;
-            else if (memberType == Tier.Silver.ToString())
-                discountPercent = 12;
-            else if (memberType == Tier.Bronze.ToString())
-                discountPercent = 6;
             try
             {
-                //Email sender code goes here
+                emailSender.SendEmail($"You got {calculateDiscountPercentage()}% off", "Renewal Discount Price", "You got mail!");
                 return true;
             }
             catch(Exception e)
             {
-                System.IO.File.WriteAllText(@"c:\Error.txt", e.ToString());// write to event viewer
+                fileLogger.Log($"Error sending email for renewal discount: {e}");
                 return false;
             }
         }
 
-        public void AddToDB()
+        public int calculateDiscountPercentage()
         {
-            try
-            {
-                // Will call a DAL API here later.
-            }
-            catch (Exception ex)
-            {
-                System.IO.File.WriteAllText(@"c:\Error.txt", ex.ToString());// write to event viewer
-            }
+            if (memberType == Tier.Gold.ToString())
+                return 24;
+            else if (memberType == Tier.Silver.ToString())
+                return 12;
+            else if (memberType == Tier.Bronze.ToString())
+                return 6;
+            else
+                return 0;
         }
     }
 }

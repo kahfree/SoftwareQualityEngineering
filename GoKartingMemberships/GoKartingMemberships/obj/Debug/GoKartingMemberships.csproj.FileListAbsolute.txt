@@ -1,0 +1,8 @@
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\bin\Debug\GoKartingMemberships.exe.config
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\bin\Debug\GoKartingMemberships.exe
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\bin\Debug\GoKartingMemberships.pdb
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\obj\Debug\GoKartingMemberships.csproj.AssemblyReference.cache
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\obj\Debug\GoKartingMemberships.csproj.SuggestedBindingRedirects.cache
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\obj\Debug\GoKartingMemberships.csproj.CoreCompileInputs.cache
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\obj\Debug\GoKartingMemberships.exe
+C:\Users\ethan\source\repos\SoftwareQualityEngineering\GoKartingMemberships\GoKartingMemberships\obj\Debug\GoKartingMemberships.pdb
